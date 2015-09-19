@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ActionBarText">
+        <item name="android:textSize">12dp</item>
+    </style>
+    
+    <color name="list_press">#dadaea</color>
+    <color name="list_select">#dadada</color>
+
+</resources>

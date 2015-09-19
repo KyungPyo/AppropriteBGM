@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/item_selector"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/mainlist_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/abc_btn_radio_to_on_mtrl_015"
+        android:layout_weight="2"/>
+
+    <TextView
+        android:id="@+id/mainlist_item_bgmname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Load Error"
+        android:textSize="20dp"
+        android:layout_weight="17"/>
+
+    <CheckBox
+        android:id="@+id/mainlist_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight="1"/>
+
+</LinearLayout>

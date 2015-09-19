@@ -1,0 +1,36 @@
+CREATE TABLE IF NOT EXISTS Category (
+  category_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  category_name VARCHAR(20) NOT NULL);
+
+CREATE TABLE IF NOT EXISTS BGMList (
+  bgm_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  bgm_name VARCHAR(255) NOT NULL,
+  bgm_path VARCHAR(255) NOT NULL,
+  innerfile INTEGER NOT NULL DEFAULT 0,
+  category_id INTEGER NOT NULL DEFAULT 2,
+  CONSTRAINT fk_BGMList_Category FOREIGN KEY (category_id) REFERENCES Category (category_id));
+
+CREATE TABLE IF NOT EXISTS Favorite (
+  favorite_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  bgm_id INTEGER NULL,
+  CONSTRAINT fk_Favorite_BGMList1 FOREIGN KEY (bgm_id) REFERENCES BGMList (bgm_id));
+
+CREATE TABLE IF NOT EXISTS Scan (
+  scan_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  scan_path VARCHAR(255) NOT NULL);
+
+INSERT INTO Scan VALUES (1, '/AppropriteBGM');
+INSERT INTO Category VALUES (1, '[전체]');
+INSERT INTO Category VALUES (2, '[분류안됨]');
+INSERT INTO Favorite VALUES (1, null);
+INSERT INTO Favorite VALUES (2, null);
+INSERT INTO Favorite VALUES (3, null);
+INSERT INTO Favorite VALUES (4, null);
+INSERT INTO Favorite VALUES (5, null);
+INSERT INTO Favorite VALUES (6, null);
+INSERT INTO Favorite VALUES (7, null);
+INSERT INTO Favorite VALUES (8, null);
+INSERT INTO Favorite VALUES (9, null);
+INSERT INTO Favorite VALUES (10, null);
+INSERT INTO Favorite VALUES (11, null);
+INSERT INTO Favorite VALUES (12, null);

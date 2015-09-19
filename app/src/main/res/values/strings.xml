@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppropriteBGM</string>
+
+    <string name="sel_category">카테고리 선택</string>
+
+    <string name="action_settings">메뉴</string>
+</resources>
